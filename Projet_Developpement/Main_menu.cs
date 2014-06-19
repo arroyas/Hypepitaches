@@ -83,20 +83,15 @@ namespace Projet_Developpement
             }
         }
 
-
-        private void bt_historique_Click(object sender, EventArgs e)
-        {
-            historique fenetreHistorique = new historique(bd);
-            fenetreHistorique.ShowDialog();
-        }
-
-
-
         private void bt_quitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+        private void bt_historique_Click(object sender, EventArgs e)
+        {
+            list_historique fenetreHistorique = new list_historique(bd);
+            fenetreHistorique.ShowDialog();
+        }
     }
 }

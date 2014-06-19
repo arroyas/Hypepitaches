@@ -29,34 +29,49 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutmetier));
             System.Windows.Forms.Label mETIER_DETAILSLabel;
-            System.Windows.Forms.Label mETIER_IDLabel;
             System.Windows.Forms.Label mETIER_NOMLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutmetier));
             this.mETIERBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.mETIERBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.mETIER_DETAILSTextBox = new System.Windows.Forms.TextBox();
-            this.mETIER_IDTextBox = new System.Windows.Forms.TextBox();
             this.mETIER_NOMTextBox = new System.Windows.Forms.TextBox();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
             mETIER_DETAILSLabel = new System.Windows.Forms.Label();
-            mETIER_IDLabel = new System.Windows.Forms.Label();
             mETIER_NOMLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mETIERBindingNavigator)).BeginInit();
             this.mETIERBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mETIER_DETAILSLabel
+            // 
+            mETIER_DETAILSLabel.AutoSize = true;
+            mETIER_DETAILSLabel.Location = new System.Drawing.Point(49, 123);
+            mETIER_DETAILSLabel.Name = "mETIER_DETAILSLabel";
+            mETIER_DETAILSLabel.Size = new System.Drawing.Size(39, 13);
+            mETIER_DETAILSLabel.TabIndex = 1;
+            mETIER_DETAILSLabel.Text = "Détails";
+            // 
+            // mETIER_NOMLabel
+            // 
+            mETIER_NOMLabel.AutoSize = true;
+            mETIER_NOMLabel.Location = new System.Drawing.Point(49, 87);
+            mETIER_NOMLabel.Name = "mETIER_NOMLabel";
+            mETIER_NOMLabel.Size = new System.Drawing.Size(29, 13);
+            mETIER_NOMLabel.TabIndex = 5;
+            mETIER_NOMLabel.Text = "Nom";
             // 
             // mETIERBindingNavigator
             // 
@@ -87,6 +102,31 @@
             this.mETIERBindingNavigator.Size = new System.Drawing.Size(306, 25);
             this.mETIERBindingNavigator.TabIndex = 0;
             this.mETIERBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -120,16 +160,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Position actuelle";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -152,26 +185,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // mETIERBindingNavigatorSaveItem
             // 
@@ -182,54 +197,18 @@
             this.mETIERBindingNavigatorSaveItem.Text = "Enregistrer les données";
             this.mETIERBindingNavigatorSaveItem.Click += new System.EventHandler(this.mETIERBindingNavigatorSaveItem_Click);
             // 
-            // mETIER_DETAILSLabel
-            // 
-            mETIER_DETAILSLabel.AutoSize = true;
-            mETIER_DETAILSLabel.Location = new System.Drawing.Point(51, 79);
-            mETIER_DETAILSLabel.Name = "mETIER_DETAILSLabel";
-            mETIER_DETAILSLabel.Size = new System.Drawing.Size(99, 13);
-            mETIER_DETAILSLabel.TabIndex = 1;
-            mETIER_DETAILSLabel.Text = "METIER DETAILS:";
-            // 
             // mETIER_DETAILSTextBox
             // 
             this.mETIER_DETAILSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "METIER_DETAILS", true));
-            this.mETIER_DETAILSTextBox.Location = new System.Drawing.Point(156, 76);
+            this.mETIER_DETAILSTextBox.Location = new System.Drawing.Point(133, 120);
             this.mETIER_DETAILSTextBox.Name = "mETIER_DETAILSTextBox";
             this.mETIER_DETAILSTextBox.Size = new System.Drawing.Size(100, 20);
             this.mETIER_DETAILSTextBox.TabIndex = 2;
             // 
-            // mETIER_IDLabel
-            // 
-            mETIER_IDLabel.AutoSize = true;
-            mETIER_IDLabel.Location = new System.Drawing.Point(51, 105);
-            mETIER_IDLabel.Name = "mETIER_IDLabel";
-            mETIER_IDLabel.Size = new System.Drawing.Size(65, 13);
-            mETIER_IDLabel.TabIndex = 3;
-            mETIER_IDLabel.Text = "METIER ID:";
-            // 
-            // mETIER_IDTextBox
-            // 
-            this.mETIER_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "METIER_ID", true));
-            this.mETIER_IDTextBox.Location = new System.Drawing.Point(156, 102);
-            this.mETIER_IDTextBox.Name = "mETIER_IDTextBox";
-            this.mETIER_IDTextBox.ReadOnly = true;
-            this.mETIER_IDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.mETIER_IDTextBox.TabIndex = 4;
-            // 
-            // mETIER_NOMLabel
-            // 
-            mETIER_NOMLabel.AutoSize = true;
-            mETIER_NOMLabel.Location = new System.Drawing.Point(51, 131);
-            mETIER_NOMLabel.Name = "mETIER_NOMLabel";
-            mETIER_NOMLabel.Size = new System.Drawing.Size(79, 13);
-            mETIER_NOMLabel.TabIndex = 5;
-            mETIER_NOMLabel.Text = "METIER NOM:";
-            // 
             // mETIER_NOMTextBox
             // 
             this.mETIER_NOMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "METIER_NOM", true));
-            this.mETIER_NOMTextBox.Location = new System.Drawing.Point(156, 128);
+            this.mETIER_NOMTextBox.Location = new System.Drawing.Point(133, 84);
             this.mETIER_NOMTextBox.Name = "mETIER_NOMTextBox";
             this.mETIER_NOMTextBox.Size = new System.Drawing.Size(100, 20);
             this.mETIER_NOMTextBox.TabIndex = 6;
@@ -242,16 +221,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 262);
+            this.ClientSize = new System.Drawing.Size(306, 203);
             this.Controls.Add(mETIER_DETAILSLabel);
             this.Controls.Add(this.mETIER_DETAILSTextBox);
-            this.Controls.Add(mETIER_IDLabel);
-            this.Controls.Add(this.mETIER_IDTextBox);
             this.Controls.Add(mETIER_NOMLabel);
             this.Controls.Add(this.mETIER_NOMTextBox);
             this.Controls.Add(this.mETIERBindingNavigator);
             this.Name = "list_ajoutmetier";
-            this.Text = "list_ajoutmetier";
+            this.Text = "Ajout de métiers";
             ((System.ComponentModel.ISupportInitialize)(this.mETIERBindingNavigator)).EndInit();
             this.mETIERBindingNavigator.ResumeLayout(false);
             this.mETIERBindingNavigator.PerformLayout();
@@ -278,7 +255,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton mETIERBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox mETIER_DETAILSTextBox;
-        private System.Windows.Forms.TextBox mETIER_IDTextBox;
         private System.Windows.Forms.TextBox mETIER_NOMTextBox;
     }
 }

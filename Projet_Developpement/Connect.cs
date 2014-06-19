@@ -29,12 +29,12 @@ namespace Projet_Developpement
 
 
             // IP SERVEUR SQL
-            
+
             // BRIAN
-            // serveur = "192.168.2.130";
+            serveur = "192.168.2.131";
 
             // DOUNIA HIPPOLYTE
-            serveur = "192.168.51.161";
+            // serveur = "192.168.51.161";
 
 
             bdd = "GRHProject";
@@ -48,7 +48,6 @@ namespace Projet_Developpement
         {
             try
             {
-
                 connexion.Open();
                 return true;
             }
@@ -99,8 +98,9 @@ namespace Projet_Developpement
             if (this.ouvrirConnexion() == true)
             {
                 SqlCommand cmd = new SqlCommand(query, connexion);
-               // cmd.CommandText = query;            //
-                // cmd.Connection = connection;      // autre methodes que directement dans le MySqlCommand();
+                // cmd.CommandText = query;
+                // cmd.Connection = connection;
+                // autre methodes que directement dans le MySqlCommand();
                 cmd.ExecuteNonQuery();
                 this.fermerConnexion();
             }
@@ -116,7 +116,28 @@ namespace Projet_Developpement
             }
         }
         
-        public SqlDataReader Select(string query)
+        public object Select(string query)
+        {
+            object result = 0;
+            if (this.ouvrirConnexion() == true)
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = query;
+                cmd.Connection = connexion;
+                result = cmd.ExecuteScalar();
+                this.fermerConnexion();
+                return result;
+            }
+            else
+            {
+                return result;
+            }
+        }
+
+
+        /*public SqlDataReader Select(string query)
         {
             SqlDataReader result = null;
             if (this.ouvrirConnexion() == true)
@@ -128,15 +149,14 @@ namespace Projet_Developpement
                 cmd.Connection = connexion;
 
                 result = cmd.ExecuteReader();
-
-                
+                Console.WriteLine(result);
                 return result;
              }
              else
              {
                  return result;
              }
-        }
+        }*/
 
         public int Count(string query)
         {

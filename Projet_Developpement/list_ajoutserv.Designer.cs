@@ -31,12 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label sERVICE_CAPACITELabel;
             System.Windows.Forms.Label sERVICE_DESIGNATIONLabel;
-            System.Windows.Forms.Label sERVICE_IDLabel;
             System.Windows.Forms.Label sERVICE_TYPELabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutserv));
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.sERVICEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,56 +49,41 @@
             this.sERVICEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.sERVICE_CAPACITETextBox = new System.Windows.Forms.TextBox();
             this.sERVICE_DESIGNATIONTextBox = new System.Windows.Forms.TextBox();
-            this.sERVICE_IDTextBox = new System.Windows.Forms.TextBox();
             this.sERVICE_TYPETextBox = new System.Windows.Forms.TextBox();
             sERVICE_CAPACITELabel = new System.Windows.Forms.Label();
             sERVICE_DESIGNATIONLabel = new System.Windows.Forms.Label();
-            sERVICE_IDLabel = new System.Windows.Forms.Label();
             sERVICE_TYPELabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sERVICEBindingNavigator)).BeginInit();
             this.sERVICEBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
             // 
             // sERVICE_CAPACITELabel
             // 
             sERVICE_CAPACITELabel.AutoSize = true;
-            sERVICE_CAPACITELabel.Location = new System.Drawing.Point(76, 117);
+            sERVICE_CAPACITELabel.Location = new System.Drawing.Point(75, 149);
             sERVICE_CAPACITELabel.Name = "sERVICE_CAPACITELabel";
-            sERVICE_CAPACITELabel.Size = new System.Drawing.Size(111, 13);
+            sERVICE_CAPACITELabel.Size = new System.Drawing.Size(49, 13);
             sERVICE_CAPACITELabel.TabIndex = 1;
-            sERVICE_CAPACITELabel.Text = "SERVICE CAPACITE:";
+            sERVICE_CAPACITELabel.Text = "Capacité";
             // 
             // sERVICE_DESIGNATIONLabel
             // 
             sERVICE_DESIGNATIONLabel.AutoSize = true;
-            sERVICE_DESIGNATIONLabel.Location = new System.Drawing.Point(76, 143);
+            sERVICE_DESIGNATIONLabel.Location = new System.Drawing.Point(75, 78);
             sERVICE_DESIGNATIONLabel.Name = "sERVICE_DESIGNATIONLabel";
-            sERVICE_DESIGNATIONLabel.Size = new System.Drawing.Size(133, 13);
+            sERVICE_DESIGNATIONLabel.Size = new System.Drawing.Size(37, 13);
             sERVICE_DESIGNATIONLabel.TabIndex = 3;
-            sERVICE_DESIGNATIONLabel.Text = "SERVICE DESIGNATION:";
-            // 
-            // sERVICE_IDLabel
-            // 
-            sERVICE_IDLabel.AutoSize = true;
-            sERVICE_IDLabel.Location = new System.Drawing.Point(76, 60);
-            sERVICE_IDLabel.Name = "sERVICE_IDLabel";
-            sERVICE_IDLabel.Size = new System.Drawing.Size(70, 13);
-            sERVICE_IDLabel.TabIndex = 5;
-            sERVICE_IDLabel.Text = "SERVICE ID:";
+            sERVICE_DESIGNATIONLabel.Text = "Libellé";
             // 
             // sERVICE_TYPELabel
             // 
             sERVICE_TYPELabel.AutoSize = true;
-            sERVICE_TYPELabel.Location = new System.Drawing.Point(76, 86);
+            sERVICE_TYPELabel.Location = new System.Drawing.Point(75, 113);
             sERVICE_TYPELabel.Name = "sERVICE_TYPELabel";
-            sERVICE_TYPELabel.Size = new System.Drawing.Size(87, 13);
+            sERVICE_TYPELabel.Size = new System.Drawing.Size(31, 13);
             sERVICE_TYPELabel.TabIndex = 7;
-            sERVICE_TYPELabel.Text = "SERVICE TYPE:";
-            // 
-            // bs
-            // 
-            this.bs.DataSource = typeof(Projet_Developpement.SERVICE);
+            sERVICE_TYPELabel.Text = "Type";
             // 
             // sERVICEBindingNavigator
             // 
@@ -139,6 +123,10 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
+            // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(Projet_Developpement.SERVICE);
             // 
             // bindingNavigatorCountItem
             // 
@@ -228,56 +216,46 @@
             // sERVICE_CAPACITETextBox
             // 
             this.sERVICE_CAPACITETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "SERVICE_CAPACITE", true));
-            this.sERVICE_CAPACITETextBox.Location = new System.Drawing.Point(215, 114);
+            this.sERVICE_CAPACITETextBox.Location = new System.Drawing.Point(200, 146);
             this.sERVICE_CAPACITETextBox.Name = "sERVICE_CAPACITETextBox";
-            this.sERVICE_CAPACITETextBox.Size = new System.Drawing.Size(100, 20);
+            this.sERVICE_CAPACITETextBox.Size = new System.Drawing.Size(114, 20);
             this.sERVICE_CAPACITETextBox.TabIndex = 2;
             // 
             // sERVICE_DESIGNATIONTextBox
             // 
             this.sERVICE_DESIGNATIONTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "SERVICE_DESIGNATION", true));
-            this.sERVICE_DESIGNATIONTextBox.Location = new System.Drawing.Point(215, 140);
+            this.sERVICE_DESIGNATIONTextBox.Location = new System.Drawing.Point(200, 75);
             this.sERVICE_DESIGNATIONTextBox.Name = "sERVICE_DESIGNATIONTextBox";
-            this.sERVICE_DESIGNATIONTextBox.Size = new System.Drawing.Size(100, 20);
+            this.sERVICE_DESIGNATIONTextBox.Size = new System.Drawing.Size(114, 20);
             this.sERVICE_DESIGNATIONTextBox.TabIndex = 4;
-            // 
-            // sERVICE_IDTextBox
-            // 
-            this.sERVICE_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "SERVICE_ID", true));
-            this.sERVICE_IDTextBox.Location = new System.Drawing.Point(215, 57);
-            this.sERVICE_IDTextBox.Name = "sERVICE_IDTextBox";
-            this.sERVICE_IDTextBox.ReadOnly = true;
-            this.sERVICE_IDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.sERVICE_IDTextBox.TabIndex = 6;
             // 
             // sERVICE_TYPETextBox
             // 
             this.sERVICE_TYPETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "SERVICE_TYPE", true));
-            this.sERVICE_TYPETextBox.Location = new System.Drawing.Point(215, 83);
+            this.sERVICE_TYPETextBox.Location = new System.Drawing.Point(200, 110);
             this.sERVICE_TYPETextBox.Name = "sERVICE_TYPETextBox";
-            this.sERVICE_TYPETextBox.Size = new System.Drawing.Size(100, 20);
+            this.sERVICE_TYPETextBox.Size = new System.Drawing.Size(114, 20);
             this.sERVICE_TYPETextBox.TabIndex = 8;
             // 
             // list_ajoutserv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 204);
+            this.ClientSize = new System.Drawing.Size(396, 209);
             this.Controls.Add(sERVICE_CAPACITELabel);
             this.Controls.Add(this.sERVICE_CAPACITETextBox);
             this.Controls.Add(sERVICE_DESIGNATIONLabel);
             this.Controls.Add(this.sERVICE_DESIGNATIONTextBox);
-            this.Controls.Add(sERVICE_IDLabel);
-            this.Controls.Add(this.sERVICE_IDTextBox);
             this.Controls.Add(sERVICE_TYPELabel);
             this.Controls.Add(this.sERVICE_TYPETextBox);
             this.Controls.Add(this.sERVICEBindingNavigator);
             this.Name = "list_ajoutserv";
-            this.Text = "lis_ajoutserv";
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            this.Text = "Ajout de service";
+            this.Load += new System.EventHandler(this.list_ajoutserv_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sERVICEBindingNavigator)).EndInit();
             this.sERVICEBindingNavigator.ResumeLayout(false);
             this.sERVICEBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +279,6 @@
         private System.Windows.Forms.ToolStripButton sERVICEBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox sERVICE_CAPACITETextBox;
         private System.Windows.Forms.TextBox sERVICE_DESIGNATIONTextBox;
-        private System.Windows.Forms.TextBox sERVICE_IDTextBox;
         private System.Windows.Forms.TextBox sERVICE_TYPETextBox;
     }
 }

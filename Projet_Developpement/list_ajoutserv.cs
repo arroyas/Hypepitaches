@@ -40,5 +40,10 @@ namespace Projet_Developpement
             bd.SaveChanges();
             actualiser = 1;
         }
+
+        private void list_ajoutserv_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

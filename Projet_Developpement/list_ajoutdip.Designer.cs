@@ -29,37 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutdip));
-            System.Windows.Forms.Label dIPLOME_IDLabel;
             System.Windows.Forms.Label dIPLOME_NOMLabel;
-            this.bs = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutdip));
             this.dIPLOMEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.dIPLOMEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.dIPLOME_IDTextBox = new System.Windows.Forms.TextBox();
             this.dIPLOME_NOMTextBox = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            dIPLOME_IDLabel = new System.Windows.Forms.Label();
+            this.bs = new System.Windows.Forms.BindingSource(this.components);
             dIPLOME_NOMLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dIPLOMEBindingNavigator)).BeginInit();
             this.dIPLOMEBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
             // 
-            // bs
+            // dIPLOME_NOMLabel
             // 
-            this.bs.DataSource = typeof(Projet_Developpement.DIPLOME);
-            this.bs.CurrentChanged += new System.EventHandler(this.bs_CurrentChanged_1);
+            dIPLOME_NOMLabel.AutoSize = true;
+            dIPLOME_NOMLabel.Location = new System.Drawing.Point(69, 93);
+            dIPLOME_NOMLabel.Name = "dIPLOME_NOMLabel";
+            dIPLOME_NOMLabel.Size = new System.Drawing.Size(37, 13);
+            dIPLOME_NOMLabel.TabIndex = 3;
+            dIPLOME_NOMLabel.Text = "Libellé";
             // 
             // dIPLOMEBindingNavigator
             // 
@@ -90,6 +91,31 @@
             this.dIPLOMEBindingNavigator.Size = new System.Drawing.Size(381, 25);
             this.dIPLOMEBindingNavigator.TabIndex = 0;
             this.dIPLOMEBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -123,16 +149,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Position actuelle";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -155,26 +174,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // dIPLOMEBindingNavigatorSaveItem
             // 
@@ -185,57 +186,33 @@
             this.dIPLOMEBindingNavigatorSaveItem.Text = "Enregistrer les données";
             this.dIPLOMEBindingNavigatorSaveItem.Click += new System.EventHandler(this.dIPLOMEBindingNavigatorSaveItem_Click);
             // 
-            // dIPLOME_IDLabel
-            // 
-            dIPLOME_IDLabel.AutoSize = true;
-            dIPLOME_IDLabel.Location = new System.Drawing.Point(94, 82);
-            dIPLOME_IDLabel.Name = "dIPLOME_IDLabel";
-            dIPLOME_IDLabel.Size = new System.Drawing.Size(72, 13);
-            dIPLOME_IDLabel.TabIndex = 1;
-            dIPLOME_IDLabel.Text = "DIPLOME ID:";
-            // 
-            // dIPLOME_IDTextBox
-            // 
-            this.dIPLOME_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "DIPLOME_ID", true));
-            this.dIPLOME_IDTextBox.Location = new System.Drawing.Point(186, 79);
-            this.dIPLOME_IDTextBox.Name = "dIPLOME_IDTextBox";
-            this.dIPLOME_IDTextBox.ReadOnly = true;
-            this.dIPLOME_IDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.dIPLOME_IDTextBox.TabIndex = 2;
-            // 
-            // dIPLOME_NOMLabel
-            // 
-            dIPLOME_NOMLabel.AutoSize = true;
-            dIPLOME_NOMLabel.Location = new System.Drawing.Point(94, 108);
-            dIPLOME_NOMLabel.Name = "dIPLOME_NOMLabel";
-            dIPLOME_NOMLabel.Size = new System.Drawing.Size(86, 13);
-            dIPLOME_NOMLabel.TabIndex = 3;
-            dIPLOME_NOMLabel.Text = "DIPLOME NOM:";
-            // 
             // dIPLOME_NOMTextBox
             // 
             this.dIPLOME_NOMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "DIPLOME_NOM", true));
-            this.dIPLOME_NOMTextBox.Location = new System.Drawing.Point(186, 105);
+            this.dIPLOME_NOMTextBox.Location = new System.Drawing.Point(141, 90);
             this.dIPLOME_NOMTextBox.Name = "dIPLOME_NOMTextBox";
-            this.dIPLOME_NOMTextBox.Size = new System.Drawing.Size(100, 20);
+            this.dIPLOME_NOMTextBox.Size = new System.Drawing.Size(165, 20);
             this.dIPLOME_NOMTextBox.TabIndex = 4;
+            // 
+            // bs
+            // 
+            this.bs.DataSource = typeof(Projet_Developpement.DIPLOME);
+            this.bs.CurrentChanged += new System.EventHandler(this.bs_CurrentChanged_1);
             // 
             // list_ajoutdip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 184);
-            this.Controls.Add(dIPLOME_IDLabel);
-            this.Controls.Add(this.dIPLOME_IDTextBox);
+            this.ClientSize = new System.Drawing.Size(381, 175);
             this.Controls.Add(dIPLOME_NOMLabel);
             this.Controls.Add(this.dIPLOME_NOMTextBox);
             this.Controls.Add(this.dIPLOMEBindingNavigator);
             this.Name = "list_ajoutdip";
-            this.Text = "list_ajoutdip";
-            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
+            this.Text = "Ajout de diplômes";
             ((System.ComponentModel.ISupportInitialize)(this.dIPLOMEBindingNavigator)).EndInit();
             this.dIPLOMEBindingNavigator.ResumeLayout(false);
             this.dIPLOMEBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +234,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton dIPLOMEBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox dIPLOME_IDTextBox;
         private System.Windows.Forms.TextBox dIPLOME_NOMTextBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
 

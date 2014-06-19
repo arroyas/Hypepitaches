@@ -29,34 +29,49 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutcomp));
             System.Windows.Forms.Label cOMP_DETAILLabel;
-            System.Windows.Forms.Label cOMP_IDLabel;
             System.Windows.Forms.Label cOMP_NOMLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(list_ajoutcomp));
             this.cOMPETENCEBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.cOMPETENCEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cOMP_DETAILTextBox = new System.Windows.Forms.TextBox();
-            this.cOMP_IDTextBox = new System.Windows.Forms.TextBox();
             this.cOMP_NOMTextBox = new System.Windows.Forms.TextBox();
             this.bs = new System.Windows.Forms.BindingSource(this.components);
             cOMP_DETAILLabel = new System.Windows.Forms.Label();
-            cOMP_IDLabel = new System.Windows.Forms.Label();
             cOMP_NOMLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cOMPETENCEBindingNavigator)).BeginInit();
             this.cOMPETENCEBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bs)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cOMP_DETAILLabel
+            // 
+            cOMP_DETAILLabel.AutoSize = true;
+            cOMP_DETAILLabel.Location = new System.Drawing.Point(42, 129);
+            cOMP_DETAILLabel.Name = "cOMP_DETAILLabel";
+            cOMP_DETAILLabel.Size = new System.Drawing.Size(34, 13);
+            cOMP_DETAILLabel.TabIndex = 1;
+            cOMP_DETAILLabel.Text = "Détail";
+            // 
+            // cOMP_NOMLabel
+            // 
+            cOMP_NOMLabel.AutoSize = true;
+            cOMP_NOMLabel.Location = new System.Drawing.Point(42, 83);
+            cOMP_NOMLabel.Name = "cOMP_NOMLabel";
+            cOMP_NOMLabel.Size = new System.Drawing.Size(29, 13);
+            cOMP_NOMLabel.TabIndex = 5;
+            cOMP_NOMLabel.Text = "Nom";
             // 
             // cOMPETENCEBindingNavigator
             // 
@@ -87,6 +102,31 @@
             this.cOMPETENCEBindingNavigator.Size = new System.Drawing.Size(303, 25);
             this.cOMPETENCEBindingNavigator.TabIndex = 0;
             this.cOMPETENCEBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -120,16 +160,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Position actuelle";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Nombre total d\'éléments";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -152,26 +185,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Ajouter nouveau";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Supprimer";
             // 
             // cOMPETENCEBindingNavigatorSaveItem
             // 
@@ -182,56 +197,20 @@
             this.cOMPETENCEBindingNavigatorSaveItem.Text = "Enregistrer les données";
             this.cOMPETENCEBindingNavigatorSaveItem.Click += new System.EventHandler(this.cOMPETENCEBindingNavigatorSaveItem_Click);
             // 
-            // cOMP_DETAILLabel
-            // 
-            cOMP_DETAILLabel.AutoSize = true;
-            cOMP_DETAILLabel.Location = new System.Drawing.Point(53, 82);
-            cOMP_DETAILLabel.Name = "cOMP_DETAILLabel";
-            cOMP_DETAILLabel.Size = new System.Drawing.Size(82, 13);
-            cOMP_DETAILLabel.TabIndex = 1;
-            cOMP_DETAILLabel.Text = "COMP DETAIL:";
-            // 
             // cOMP_DETAILTextBox
             // 
             this.cOMP_DETAILTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "COMP_DETAIL", true));
-            this.cOMP_DETAILTextBox.Location = new System.Drawing.Point(141, 79);
+            this.cOMP_DETAILTextBox.Location = new System.Drawing.Point(110, 129);
             this.cOMP_DETAILTextBox.Name = "cOMP_DETAILTextBox";
-            this.cOMP_DETAILTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cOMP_DETAILTextBox.Size = new System.Drawing.Size(146, 20);
             this.cOMP_DETAILTextBox.TabIndex = 2;
-            // 
-            // cOMP_IDLabel
-            // 
-            cOMP_IDLabel.AutoSize = true;
-            cOMP_IDLabel.Location = new System.Drawing.Point(53, 108);
-            cOMP_IDLabel.Name = "cOMP_IDLabel";
-            cOMP_IDLabel.Size = new System.Drawing.Size(55, 13);
-            cOMP_IDLabel.TabIndex = 3;
-            cOMP_IDLabel.Text = "COMP ID:";
-            // 
-            // cOMP_IDTextBox
-            // 
-            this.cOMP_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "COMP_ID", true));
-            this.cOMP_IDTextBox.Location = new System.Drawing.Point(141, 105);
-            this.cOMP_IDTextBox.Name = "cOMP_IDTextBox";
-            this.cOMP_IDTextBox.ReadOnly = true;
-            this.cOMP_IDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cOMP_IDTextBox.TabIndex = 4;
-            // 
-            // cOMP_NOMLabel
-            // 
-            cOMP_NOMLabel.AutoSize = true;
-            cOMP_NOMLabel.Location = new System.Drawing.Point(53, 134);
-            cOMP_NOMLabel.Name = "cOMP_NOMLabel";
-            cOMP_NOMLabel.Size = new System.Drawing.Size(69, 13);
-            cOMP_NOMLabel.TabIndex = 5;
-            cOMP_NOMLabel.Text = "COMP NOM:";
             // 
             // cOMP_NOMTextBox
             // 
             this.cOMP_NOMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bs, "COMP_NOM", true));
-            this.cOMP_NOMTextBox.Location = new System.Drawing.Point(141, 131);
+            this.cOMP_NOMTextBox.Location = new System.Drawing.Point(110, 83);
             this.cOMP_NOMTextBox.Name = "cOMP_NOMTextBox";
-            this.cOMP_NOMTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cOMP_NOMTextBox.Size = new System.Drawing.Size(146, 20);
             this.cOMP_NOMTextBox.TabIndex = 6;
             // 
             // bs
@@ -242,16 +221,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 262);
+            this.ClientSize = new System.Drawing.Size(303, 213);
             this.Controls.Add(cOMP_DETAILLabel);
             this.Controls.Add(this.cOMP_DETAILTextBox);
-            this.Controls.Add(cOMP_IDLabel);
-            this.Controls.Add(this.cOMP_IDTextBox);
             this.Controls.Add(cOMP_NOMLabel);
             this.Controls.Add(this.cOMP_NOMTextBox);
             this.Controls.Add(this.cOMPETENCEBindingNavigator);
             this.Name = "list_ajoutcomp";
-            this.Text = "list_ajoutcomp";
+            this.Text = "Ajout de compétences";
             ((System.ComponentModel.ISupportInitialize)(this.cOMPETENCEBindingNavigator)).EndInit();
             this.cOMPETENCEBindingNavigator.ResumeLayout(false);
             this.cOMPETENCEBindingNavigator.PerformLayout();
@@ -278,7 +255,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton cOMPETENCEBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox cOMP_DETAILTextBox;
-        private System.Windows.Forms.TextBox cOMP_IDTextBox;
         private System.Windows.Forms.TextBox cOMP_NOMTextBox;
     }
 }

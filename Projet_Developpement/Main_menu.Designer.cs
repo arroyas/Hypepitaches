@@ -147,12 +147,11 @@
             this.l_historique.AutoSize = true;
             this.l_historique.Font = new System.Drawing.Font("Gabriola", 15F, System.Drawing.FontStyle.Bold);
             this.l_historique.ForeColor = System.Drawing.Color.Black;
-            this.l_historique.Location = new System.Drawing.Point(99, 173);
+            this.l_historique.Location = new System.Drawing.Point(99, 171);
             this.l_historique.Name = "l_historique";
             this.l_historique.Size = new System.Drawing.Size(92, 37);
             this.l_historique.TabIndex = 6;
             this.l_historique.Text = "Historique";
-            this.l_historique.Visible = false;
             // 
             // l_gestion
             // 
@@ -164,7 +163,6 @@
             this.l_gestion.Size = new System.Drawing.Size(109, 37);
             this.l_gestion.TabIndex = 5;
             this.l_gestion.Text = "Gestion DRH";
-            this.l_gestion.Visible = false;
             // 
             // l_employes
             // 
@@ -205,7 +203,6 @@
             this.bt_historique.Size = new System.Drawing.Size(75, 70);
             this.bt_historique.TabIndex = 2;
             this.bt_historique.UseVisualStyleBackColor = true;
-            this.bt_historique.Visible = false;
             this.bt_historique.Click += new System.EventHandler(this.bt_historique_Click);
             // 
             // bt_gestion
@@ -221,7 +218,6 @@
             this.bt_gestion.Size = new System.Drawing.Size(75, 70);
             this.bt_gestion.TabIndex = 1;
             this.bt_gestion.UseVisualStyleBackColor = true;
-            this.bt_gestion.Visible = false;
             this.bt_gestion.Click += new System.EventHandler(this.bt_gestion_Click);
             // 
             // bt_employes

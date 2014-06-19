@@ -64,12 +64,6 @@
       <DependentUpon>deconnexion.cs</DependentUpon>
     </Compile>
     <Compile Include="DIPLOME.cs" />
-    <Compile Include="historique.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="historique.Designer.cs">
-      <DependentUpon>historique.cs</DependentUpon>
-    </Compile>
     <Compile Include="liste_emp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +118,23 @@
     <Compile Include="list_ajoutserv.Designer.cs">
       <DependentUpon>list_ajoutserv.cs</DependentUpon>
     </Compile>
-    <Compile Include="list_dipemp.cs">
+    <Compile Include="list_empCompetences.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="list_dipemp.Designer.cs">
-      <DependentUpon>list_dipemp.cs</DependentUpon>
+    <Compile Include="list_empCompetences.Designer.cs">
+      <DependentUpon>list_empCompetences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="list_empService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="list_empService.Designer.cs">
+      <DependentUpon>list_empService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="list_historique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="list_historique.Designer.cs">
+      <DependentUpon>list_historique.cs</DependentUpon>
     </Compile>
     <Compile Include="Main_menu.cs">
       <SubType>Form</SubType>
@@ -143,9 +149,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="deconnexion.resx">
       <DependentUpon>deconnexion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="historique.resx">
-      <DependentUpon>historique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="liste_choix.resx">
       <DependentUpon>liste_choix.cs</DependentUpon>
@@ -171,8 +174,14 @@
     <EmbeddedResource Include="list_ajoutserv.resx">
       <DependentUpon>list_ajoutserv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="list_dipemp.resx">
-      <DependentUpon>list_dipemp.cs</DependentUpon>
+    <EmbeddedResource Include="list_empCompetences.resx">
+      <DependentUpon>list_empCompetences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_empService.resx">
+      <DependentUpon>list_empService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_historique.resx">
+      <DependentUpon>list_historique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_menu.resx">
       <DependentUpon>Main_menu.cs</DependentUpon>
@@ -196,13 +205,13 @@
     <None Include="Properties\DataSources\CONTRAT.datasource" />
     <None Include="Properties\DataSources\DIPLOME.datasource" />
     <None Include="Properties\DataSources\EMPLOYE.datasource" />
+    <None Include="Properties\DataSources\EST_GERE_PAR.datasource" />
     <None Include="Properties\DataSources\GRHProjectEntities.datasource" />
     <None Include="Properties\DataSources\GRHProjectEntities1.datasource" />
     <None Include="Properties\DataSources\HISTORIQUE.datasource" />
     <None Include="Properties\DataSources\METIER.datasource" />
     <None Include="Properties\DataSources\SERVICE.datasource" />
     <None Include="Properties\DataSources\SIGNE.datasource" />
-    <None Include="Properties\DataSources\TRAVAILLE.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
